@@ -5,4 +5,4 @@ export function showLog(message: string): boolean {
   return true
 }
 
-showLog('string props')
+showLog('string props from ts file')
