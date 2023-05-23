@@ -1,3 +1,1 @@
-import {showLog} from './index'
-
-showLog('Test log')
+console.log('test file')
