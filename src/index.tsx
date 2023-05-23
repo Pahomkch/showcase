@@ -1,3 +1,6 @@
+import { render } from "react-dom"
+import {Counter} from './components/Counter/index'
+
 export function showLog(message: string): boolean {
   console.log('Hey!')
   console.log(message)
@@ -8,4 +11,4 @@ export function showLog(message: string): boolean {
 showLog('string props from ts file')
 
 
-document.body.innerHTML = `<div>Hello</div>`
+render(<Counter />, document.getElementById('root'));
