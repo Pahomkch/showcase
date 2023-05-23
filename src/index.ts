@@ -6,3 +6,6 @@ export function showLog(message: string): boolean {
 }
 
 showLog('string props from ts file')
+
+
+document.body.innerHTML = `<div>Hello</div>`

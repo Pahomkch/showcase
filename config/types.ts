@@ -5,6 +5,10 @@ export interface BuildPaths {
 }
 
 export interface BuildOptions {
-  mode: 'production' | 'development'
   paths: BuildPaths
+}
+
+export interface buildConfigEnv {
+  port?: number
+  mode: 'production' | 'development'
 }
