@@ -1,0 +1,49 @@
+.container {
+  display: grid;
+  grid-template-columns: 2;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: 2;
+  gap: 8px;
+  justify-content: center;
+  text-align: center;
+
+  .link {
+    color: var(--info);
+    &:hover {
+      color: var(--on-primary);
+    }
+  }
+
+  .success {
+    color: var(--success);
+    &:hover {
+      color: var(--on-primary);
+    }
+  }
+
+  .info {
+    color: var(--info);
+    &:hover {
+      color: var(--on-primary);
+    }
+  }
+
+  .warning {
+    color: var(--warning);
+    &:hover {
+      color: var(--on-primary);
+    }
+  }
+
+  .danger {
+    color: var(--danger);
+    &:hover {
+      color: var(--on-primary);
+    }
+  }
+}

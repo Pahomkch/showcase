@@ -1,0 +1,31 @@
+.app.light {
+  --primary-color: #363636;
+  --secondary-color: #ebf1db;
+  --on-primary: #333;
+  --on-secondary: #555;
+
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+
+
+  color: var(--primary-color);
+  background: var(--secondary-color);
+
+}
+
+.app.dark {
+  --primary-color: #c0c0c0;
+  --secondary-color: #555;
+  --on-primary: #f0f0f0;
+  --on-secondary: #ddd;
+
+  --success: #2b9a4c;
+  --info: #1694ab;
+  --warning: #b2860a;
+  --danger: #9a1c2c;
+
+  color: var(--primary-color);
+  background: var(--secondary-color);
+}
