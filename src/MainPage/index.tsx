@@ -2,15 +2,10 @@ import { memo } from 'react'
 import { Link } from 'react-router-dom'
 import { Counter } from 'src/components/Counter'
 import styles from './style.module.scss'
-import classNames from 'classnames'
-import { useTheme } from 'src/common/hooks/useTheme'
 
 export const MainPage = memo(function MainPage() {
-  const {changeTheme, theme} = useTheme()
-
-  return <div className={classNames('app', theme, styles.container)}>
+  return <div className={styles.container}>
     <p>Hello APP</p>
-    <button onClick={changeTheme}>{theme === 'light' ? '🌚' : '☀️'}</button>
 
     <Counter />
 
