@@ -1,9 +1,10 @@
 import { render } from "react-dom"
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { StrictMode } from "react";
+import { StrictMode, Suspense, lazy } from "react";
 import MainPage from "src/pages/main"
 import './globalStyle.scss'
-import AboutPage from "src/pages/about";
+const LazyAboutPage = lazy(() => import('src/pages/about'));
+
 
 const router = createBrowserRouter([
   {
@@ -13,12 +14,14 @@ const router = createBrowserRouter([
 
   {
     path: "/about",
-    element: <AboutPage />,
+    element: <LazyAboutPage />,
   },
 ]);
 
 
 
 render(<StrictMode>
-  <RouterProvider router={router} />
+  <Suspense fallback={<div>🌀Loading🌀</div>}>
+    <RouterProvider router={router} />
+  </Suspense>
 </StrictMode>, document.getElementById('root'));
