@@ -6,5 +6,6 @@ export default buildWebpackConfig({
     entry: path.join(__dirname, 'src', 'index.tsx'),
     build: path.resolve(__dirname, 'build'),
     htmlFile: path.resolve(__dirname, 'public', 'index.html'),
+    srcFolder: path.resolve(__dirname, 'src')
   }
 })
