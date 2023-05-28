@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { ReactNode, memo } from 'react'
-import { useTheme } from 'src/common/hooks/useTheme'
+import { useTheme } from 'common/hooks/useTheme'
 import styles from './style.module.scss'
 
 export const Layout = memo(function Layout(props: { children: ReactNode }) {

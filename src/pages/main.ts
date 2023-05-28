@@ -1,2 +1,2 @@
-import {MainPage} from 'src/MainPage'
+import {MainPage} from 'MainPage'
 export default MainPage

@@ -1,12 +1,11 @@
 import { render } from "react-dom"
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { StrictMode, Suspense, lazy } from "react";
-import MainPage from "src/pages/main"
+import MainPage from "pages/main"
 import 'src/styles/index.scss'
-import { ThemeContextProvider } from "./common/Contexts/ThemeContext";
-import { Layout } from "./components/Layout";
-const LazyAboutPage = lazy(() => import('src/pages/about'));
-
+import { ThemeContextProvider } from "../common/Contexts/ThemeContext";
+import { Layout } from "../components/Layout";
+const LazyAboutPage = lazy(() => import('pages/about'));
 
 const router = createBrowserRouter([
   {
@@ -19,8 +18,6 @@ const router = createBrowserRouter([
     element: <LazyAboutPage />,
   },
 ]);
-
-
 
 render(<StrictMode>
   <ThemeContextProvider>

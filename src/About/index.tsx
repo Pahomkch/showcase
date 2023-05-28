@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { Link } from 'react-router-dom'
-import { Counter } from 'src/components/Counter'
+import { Counter } from 'components/Counter'
 
 export const AboutPage = memo(function AboutPage() {
   return <div className="app">

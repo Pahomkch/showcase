@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { Link } from 'react-router-dom'
-import { Counter } from 'src/components/Counter'
+import { Counter } from 'components/Counter'
 import styles from './style.module.scss'
 
 export const MainPage = memo(function MainPage() {
