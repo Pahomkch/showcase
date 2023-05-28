@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Counter } from 'components/Counter'
 import styles from './style.module.scss'
 
-export const MainPage = memo(function MainPage() {
+const MainPage = memo(function MainPage() {
   return <div className={styles.container}>
     <p>Hello APP</p>
 
@@ -20,3 +20,5 @@ export const MainPage = memo(function MainPage() {
     </div>
   </div>
 })
+
+export default MainPage
