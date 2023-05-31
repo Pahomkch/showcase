@@ -1,9 +1,32 @@
-.container {
-  --main-section-width: 900px;
+@import 'variables';
 
+.container {
   position: relative;
+}
+
+.content {
+  --main-section-width: 500px;
+
   display: grid;
-  grid-template-columns: 1fr 900px 1fr;
+  grid-template-columns: 1fr var(--main-section-width) 1fr;
+
+  @include respond-to('xl') {
+    background-color: #62dee2;
+  }
+
+  @include respond-to('lg') {
+    background-color: #80e262;
+  }
+
+  @include respond-to('md') {
+    background-color: #d1e262;
+    --main-section-width: 300px;
+  }
+
+  @include respond-to('sm') {
+    background-color: #e26262;
+
+  }
 
   & > * {
     grid-column-start: 2;
@@ -20,8 +43,8 @@
   box-shadow: 0px 0px 10px var(--on-primary);
   border-radius: 8px;
 
-  top: 10px;
-  right: 10px;
+  top: 40px;
+  right: 20px;
   font-size: 30px;
   background: transparent;
 

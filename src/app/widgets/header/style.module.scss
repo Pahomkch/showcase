@@ -1,0 +1,18 @@
+.container {
+  height: 40px;
+  padding: 5px 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-items: flex-end;
+  column-gap: 16px;
+  align-items: center;
+}
+
+  .link {
+    color: var(--info);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--on-primary);
+    }
+  }

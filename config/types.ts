@@ -3,6 +3,7 @@ export interface BuildPaths {
   entry: string
   build: string
   srcFolder: string
+  styleFolder: string
 }
 
 export interface BuildOptions {
