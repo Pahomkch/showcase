@@ -12,6 +12,9 @@
   --font-size-l: 24px;
   --line-height-l: 30px;
   --font-l: var(--font-size-l)/var(--line-height-l) var(--roboto-font-family);
+
+  /* sizes */
+  --header-height: 30px;
 }
 
 $breakpoints: (

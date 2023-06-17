@@ -1,6 +1,6 @@
 import { memo } from 'react'
-import { Link } from 'react-router-dom'
 import styles from './style.module.scss'
+import { Link } from 'components/Link'
 
 export const Header = memo(function Header(props: { className?: string }) {
   return <header className={styles.container}>

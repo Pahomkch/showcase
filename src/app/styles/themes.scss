@@ -1,5 +1,6 @@
 .app.light {
   --primary-color: #363636;
+  --contrast-color: #2bc80029;
   --secondary-color: #ebf1db;
   --on-primary: #333;
   --on-secondary: #555;
@@ -9,14 +10,13 @@
   --warning: #ffc107;
   --danger: #dc3545;
 
-
   color: var(--primary-color);
   background: var(--secondary-color);
-
 }
 
 .app.dark {
   --primary-color: #c0c0c0;
+  --contrast-color: #04003d47;
   --secondary-color: #555;
   --on-primary: #f0f0f0;
   --on-secondary: #ddd;

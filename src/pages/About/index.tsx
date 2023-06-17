@@ -1,15 +1,8 @@
 import { memo } from 'react'
-import { Link } from 'react-router-dom'
-import { Counter } from 'components/Counter'
 
 const AboutPage = memo(function AboutPage() {
   return <div className="app">
-    About APP
-    <Counter />
-
-    <div>
-      <Link to="/">Main</Link>
-    </div>
+    My name is Andrew, I'm creating project where I can used all technologies what I interested or passion
   </div>
 })
 

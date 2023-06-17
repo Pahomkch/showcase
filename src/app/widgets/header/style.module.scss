@@ -1,11 +1,12 @@
 .container {
-  height: 40px;
+  height: var(--header-height);
   padding: 5px 10px;
   display: grid;
-  grid-template-columns: 1fr auto;
-  justify-items: flex-end;
+  grid-auto-flow: column;
+  justify-content: flex-start;
   column-gap: 16px;
   align-items: center;
+  background: var(--contrast-color);
 }
 
   .link {
