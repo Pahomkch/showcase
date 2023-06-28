@@ -1,12 +1,10 @@
 import { memo } from 'react'
-import { Counter } from 'components/Counter'
 import styles from './style.module.scss'
 
 const MainPage = memo(function MainPage() {
   return <div className={styles.container}>
     <p>Hello APP</p>
 
-    <Counter />
 
     <div className={styles.links}>
       <p className={styles.success}>success</p>
