@@ -10,11 +10,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = memo(function Button(props: ButtonProps) {
-
   return <button className={classNames(styles.button, props.classNames)}>
     <MoonSvg />
     <SunSvg />
-    
     <img src={SunPng} alt="sun" />
     {props.children}
   </button>
