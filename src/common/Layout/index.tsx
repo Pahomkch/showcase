@@ -3,6 +3,7 @@ import { ReactNode, memo } from 'react'
 import { useTheme } from 'common/hooks/useTheme'
 import styles from './style.module.scss'
 import { Header } from 'app/widgets/header'
+import { Button } from 'components/Button'
 
 export const Layout = memo(function Layout(props: { children: ReactNode }) {
   const { changeTheme, theme } = useTheme()
@@ -13,6 +14,8 @@ export const Layout = memo(function Layout(props: { children: ReactNode }) {
     <button className={styles['theme-toggle']} onClick={changeTheme}>
       <span className={styles['square-button-content']}>{theme === 'light' ? '🌚' : '☀️'}</span>
     </button>
+
+    <Button>hello btn</Button>
 
     <main className={styles.content}>
       {props.children}

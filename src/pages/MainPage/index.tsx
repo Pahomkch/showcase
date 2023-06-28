@@ -9,8 +9,6 @@ const MainPage = memo(function MainPage() {
     <Counter />
 
     <div className={styles.links}>
-
-
       <p className={styles.success}>success</p>
       <p className={styles.info}>info</p>
       <p className={styles.warning}>warning</p>
