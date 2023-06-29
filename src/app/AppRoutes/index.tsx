@@ -3,8 +3,8 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from 'react-router-dom'
-import { Suspense, lazy, memo } from 'react'
-import { Layout } from 'common/Layout'
+import {Suspense, lazy, memo} from 'react'
+import {Layout} from 'common/Layout'
 import MainPage from 'pages/MainPage'
 const LazyAboutPage = lazy(() => import('pages/About'))
 
@@ -33,9 +33,7 @@ const routers: Record<AppRoutesEnum, RouteObject> = {
   },
 }
 
-export const AppRoutes = memo(function AppRoutes(props: {
-  className?: string
-}) {
+export const AppRoutes = memo(function AppRoutes(props: {className?: string}) {
   return (
     <Suspense fallback={<div>🌀Loading🌀</div>}>
       <RouterProvider

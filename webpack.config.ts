@@ -1,4 +1,4 @@
-import { buildWebpackConfig } from './config/build'
+import {buildWebpackConfig} from './config/build'
 import path from 'path'
 
 export default buildWebpackConfig({

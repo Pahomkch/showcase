@@ -1,10 +1,10 @@
-import { memo, useState } from 'react'
+import {memo, useState} from 'react'
 import styles from './style.module.scss'
-import { LinkProps, Link as ReactRouterDomLink } from 'react-router-dom'
+import {LinkProps, Link as ReactRouterDomLink} from 'react-router-dom'
 import cn from 'classnames'
 
 export const Link = memo(function Link(
-  props: { className?: string; theme?: 'primary' | 'secondary' } & LinkProps,
+  props: {className?: string; theme?: 'primary' | 'secondary'} & LinkProps,
 ) {
   return (
     <ReactRouterDomLink

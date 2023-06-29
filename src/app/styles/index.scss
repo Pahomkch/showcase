@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-@import url('./reset.scss');
-@import url('./variables.scss');
-@import url('./themes.scss');
+@import 'reset';
+@import 'variables';
+@import 'themes';
 
 * {
   padding: 0;
@@ -13,4 +13,8 @@
   padding: 0 10px;
   min-height: 100vh;
   font: var(--font-m);
+
+  @include respond-to('md') {
+    padding: 0 4px;
+  }
 }

@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import {memo} from 'react'
 import styles from './style.module.scss'
 
 const MainPage = memo(function MainPage() {
