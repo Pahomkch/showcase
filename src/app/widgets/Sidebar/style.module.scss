@@ -1,0 +1,15 @@
+@import 'variables';
+
+.container {
+  display: grid;
+  background-color: var(--contrast-color);
+  row-gap: 8px;
+  align-content: flex-start;
+  width: var(--sidebar-open);
+  transition: width 0.2s ease-out;
+  padding: 0 10px;
+}
+
+.close {
+  width: var(--sidebar-close);
+}

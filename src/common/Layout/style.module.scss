@@ -1,33 +1,37 @@
 @import 'variables';
 
-.container {
-  position: relative;
+.layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100vh;
+  grid-template-rows: auto 1fr;
+}
+
+.span-2 {
+  grid-column: span 2;
 }
 
 .content {
-  --main-section-width: 1100px;
+  --main-section-gap: 20px;
 
   display: grid;
-  grid-template-columns: 1fr var(--main-section-width) 1fr;
+  grid-template-columns: var(--main-section-gap) 1fr var(--main-section-gap);
 
   @include respond-to('xl') {
     background-color: #62dee2;
-    --main-section-width: 900px;
   }
 
   @include respond-to('lg') {
     background-color: #80e262;
-    --main-section-width: 700px;
   }
 
   @include respond-to('md') {
     background-color: #d1e262;
-    --main-section-width: 500px;
   }
 
   @include respond-to('sm') {
     background-color: #e26262;
-    --main-section-width: 420px;
+    --main-section-gap: 5px;
   }
 
   & > * {

@@ -14,7 +14,9 @@
   --font-l: var(--font-size-l) / var(--line-height-l) var(--roboto-font-family);
 
   /* sizes */
-  --header-height: 30px;
+  --header-height: 50px;
+  --sidebar-open: 300px;
+  --sidebar-close: 70px;
 }
 
 $breakpoints: (
