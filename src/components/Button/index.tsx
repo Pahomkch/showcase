@@ -1,4 +1,4 @@
-import {ButtonHTMLAttributes, memo, useState} from 'react'
+import { ButtonHTMLAttributes, memo, useState } from 'react'
 import styles from './style.module.scss'
 import classNames from 'classnames'
 import MoonSvg from 'src/common/assets/icons/moon.svg'
@@ -10,10 +10,12 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = memo(function Button(props: ButtonProps) {
-  return <button className={classNames(styles.button, props.classNames)}>
-    <MoonSvg />
-    <SunSvg />
-    <img src={SunPng} alt="sun" />
-    {props.children}
-  </button>
+  return (
+    <button className={classNames(styles.button, props.classNames)}>
+      <MoonSvg />
+      <SunSvg />
+      <img src={SunPng} alt="sun" />
+      {props.children}
+    </button>
+  )
 })

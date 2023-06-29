@@ -1,4 +1,4 @@
-import { buildWebpackConfig } from './config/build';
+import { buildWebpackConfig } from './config/build'
 import path from 'path'
 
 export default buildWebpackConfig({
@@ -7,6 +7,6 @@ export default buildWebpackConfig({
     build: path.resolve(__dirname, 'build'),
     htmlFile: path.resolve(__dirname, 'public', 'index.html'),
     srcFolder: path.resolve(__dirname, 'src'),
-    styleFolder: path.resolve(__dirname, "src", "app", "styles")
-  }
+    styleFolder: path.resolve(__dirname, 'src', 'app', 'styles'),
+  },
 })

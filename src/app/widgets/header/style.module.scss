@@ -9,11 +9,11 @@
   background: var(--contrast-color);
 }
 
-  .link {
-    color: var(--info);
-    text-decoration: none;
+.link {
+  color: var(--info);
+  text-decoration: none;
 
-    &:hover {
-      color: var(--on-primary);
-    }
+  &:hover {
+    color: var(--on-primary);
   }
+}

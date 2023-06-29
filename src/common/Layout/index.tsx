@@ -8,18 +8,19 @@ import { Button } from 'components/Button'
 export const Layout = memo(function Layout(props: { children: ReactNode }) {
   const { changeTheme, theme } = useTheme()
 
-  return <div className={classNames('app', theme, styles.container)}>
-    <Header />
+  return (
+    <div className={classNames('app', theme, styles.container)}>
+      <Header />
 
-    <button className={styles['theme-toggle']} onClick={changeTheme}>
-      <span className={styles['square-button-content']}>{theme === 'light' ? '🌚' : '☀️'}</span>
-    </button>
+      <button className={styles['theme-toggle']} onClick={changeTheme}>
+        <span className={styles['square-button-content']}>
+          {theme === 'light' ? '🌚' : '☀️'}
+        </span>
+      </button>
 
-    <Button>hello btn</Button>
+      <Button>hello btn</Button>
 
-    <main className={styles.content}>
-      {props.children}
-    </main>
-
-  </div>
+      <main className={styles.content}>{props.children}</main>
+    </div>
+  )
 })

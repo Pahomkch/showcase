@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "baseUrl": ".", // baseUrl for modules. Step 2
-    "paths": { // Paths for all absolute import. Step 1 (first look here)
+    "paths": {
+      // Paths for all absolute import. Step 1 (first look here)
       "*": ["./src/*"]
     },
     "outDir": "./dist/",
@@ -12,7 +13,7 @@
     "allowJs": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
   },
 
   "ts-node": {
