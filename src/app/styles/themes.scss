@@ -1,9 +1,15 @@
+.app {
+  font: var(--font-m);
+}
+
 .app.light {
   --primary-color: #363636;
   --contrast-color: #2bc80029;
   --secondary-color: #ebf1db;
   --on-primary: #333;
   --on-secondary: #555;
+
+  --sidebar-color: #ededed;
 
   --success: #28a745;
   --info: #17a2b8;
@@ -20,6 +26,8 @@
   --secondary-color: #555;
   --on-primary: #f0f0f0;
   --on-secondary: #ddd;
+
+  --sidebar-color: #454643;
 
   --success: #2b9a4c;
   --info: #1694ab;

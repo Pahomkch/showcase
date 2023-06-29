@@ -39,12 +39,21 @@
   }
 }
 
+.app {
+  padding: 0 10px;
+  min-height: 100vh;
+  font: var(--font-m);
+
+  @include respond-to('md') {
+    padding: 0 4px;
+  }
+}
+
 .theme-toggle {
   position: fixed;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1em;
   border: none;
   box-shadow: 0px 0px 10px var(--on-primary);
   border-radius: 8px;

@@ -9,7 +9,7 @@ export const Sidebar = memo(function Sidebar(props: {className?: string}) {
   const {changeTheme, theme} = useTheme()
   const [isClose, setIsClose] = useState(true)
   const toggle = useCallback(() => setIsClose((flag) => !flag), [])
-  console.log(isClose)
+
   return (
     <div
       className={classNames(styles.container, props.className, {
