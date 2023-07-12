@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".", // baseUrl for modules. Step 2
+    "baseUrl": "./", // baseUrl for modules. Step 2
     "paths": {
       // Paths for all absolute import. Step 1 (first look here)
       "*": ["./src/*"]

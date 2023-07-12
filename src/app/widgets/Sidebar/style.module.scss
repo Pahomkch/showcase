@@ -7,9 +7,13 @@
   align-content: flex-start;
   width: var(--sidebar-open);
   transition: width 0.2s ease-out;
-  padding: 0 10px;
+  padding: 5px 10px;
 }
 
 .close {
   width: var(--sidebar-close);
+}
+
+.toggle {
+  outline: 1px dotted black;
 }

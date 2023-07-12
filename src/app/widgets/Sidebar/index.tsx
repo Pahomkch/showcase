@@ -4,11 +4,14 @@ import {Link} from 'components/Link'
 import {useTheme} from 'common/hooks/useTheme'
 import {Button} from 'components/Button'
 import classNames from 'classnames'
+import {useTranslation} from 'react-i18next'
+import {ChangeLanguage} from 'components/ChangeLanguage'
 
 export const Sidebar = memo(function Sidebar(props: {className?: string}) {
   const {changeTheme, theme} = useTheme()
   const [isClose, setIsClose] = useState(true)
   const toggle = useCallback(() => setIsClose((flag) => !flag), [])
+  const {t} = useTranslation()
 
   return (
     <div
@@ -16,7 +19,9 @@ export const Sidebar = memo(function Sidebar(props: {className?: string}) {
         [styles.close]: isClose,
       })}
     >
-      <Button onClick={toggle}>{isClose ? 'Show' : 'Close'}</Button>
+      <Button className={styles.toggle} onClick={toggle}>
+        {isClose ? t('Open') : t('Close')}
+      </Button>
 
       <button className={styles['theme-toggle']} onClick={changeTheme}>
         <span className={styles['square-button-content']}>
@@ -24,7 +29,7 @@ export const Sidebar = memo(function Sidebar(props: {className?: string}) {
         </span>
       </button>
 
-      <Button>RU</Button>
+      <ChangeLanguage />
     </div>
   )
 })

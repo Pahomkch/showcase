@@ -48,7 +48,6 @@
   }
 }
 
-
 .cq {
   display: flex;
   gap: 10px;
@@ -65,10 +64,11 @@
 }
 
 .subgrid {
-
 }
 
-.a, .b, .c {
+.a,
+.b,
+.c {
   display: block;
   width: 40px;
   height: 40px;
