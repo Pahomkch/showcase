@@ -2,6 +2,7 @@
   display: grid;
   align-content: flex-start;
   gap: 8px;
+  text-align: center;
 }
 
 .links {
@@ -44,5 +45,47 @@
     &:hover {
       color: var(--on-primary);
     }
+  }
+}
+
+
+.cq {
+  display: flex;
+  gap: 10px;
+  container-type: inline-size;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.subgrid {
+
+}
+
+.a, .b, .c {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(10, 60, 60);
+}
+.a {
+  @container (400px < width <  900px) {
+    background-color: red;
+  }
+}
+.b {
+  @container (200px < width <  600px) {
+    background-color: blue;
+  }
+}
+.c {
+  @container (min-width: 700px) {
+    background-color: yellow;
   }
 }
