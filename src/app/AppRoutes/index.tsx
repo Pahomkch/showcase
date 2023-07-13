@@ -33,7 +33,7 @@ const routers: Record<AppRoutesEnum, RouteObject> = {
   },
 }
 
-export const AppRoutes = memo(function AppRoutes(props: {className?: string}) {
+export const AppRoutes = memo(function AppRoutes() {
   return (
     <Suspense fallback={<div>🌀Loading🌀</div>}>
       <RouterProvider

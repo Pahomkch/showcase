@@ -1,6 +1,5 @@
 import {memo, useCallback, useState} from 'react'
 import styles from './style.module.scss'
-import {Link} from 'components/Link'
 import {useTheme} from 'common/hooks/useTheme'
 import {Button} from 'components/Button'
 import classNames from 'classnames'

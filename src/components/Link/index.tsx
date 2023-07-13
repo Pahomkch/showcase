@@ -1,4 +1,4 @@
-import {memo, useState} from 'react'
+import {memo} from 'react'
 import styles from './style.module.scss'
 import {LinkProps, Link as ReactRouterDomLink} from 'react-router-dom'
 import cn from 'classnames'

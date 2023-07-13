@@ -1,4 +1,4 @@
-import {ButtonHTMLAttributes, memo, useState} from 'react'
+import {ButtonHTMLAttributes, memo} from 'react'
 import styles from './style.module.scss'
 import cn from 'classnames'
 
