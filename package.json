@@ -8,7 +8,8 @@
     "build": "webpack --env mode=production",
     "dev": "webpack serve --env mode=development",
     "format": "prettier --write ./",
-    "lint": "eslint **/*.{ts,tsx}"
+    "lint:ts": "eslint **/*.{ts,tsx}",
+    "lint:ts:fix": "eslint **/*.{ts,tsx} --fix"
   },
   "keywords": [],
   "author": "",
