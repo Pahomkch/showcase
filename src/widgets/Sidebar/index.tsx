@@ -1,10 +1,10 @@
 import {memo, useCallback, useState} from 'react'
 import styles from './style.module.scss'
-import {useTheme} from 'common/hooks/useTheme'
-import {Button} from 'components/Button'
+import {useTheme} from 'shared/hooks/useTheme'
+import {Button} from 'shared/ui/Button'
 import classNames from 'classnames'
 import {useTranslation} from 'react-i18next'
-import {ChangeLanguage} from 'components/ChangeLanguage'
+import {ChangeLanguage} from 'features/ui/ChangeLanguage'
 
 export const Sidebar = memo(function Sidebar(props: {className?: string}) {
   const {changeTheme, theme} = useTheme()

@@ -1,4 +1,4 @@
-import {Button} from 'components/Button'
+import {Button} from 'shared/ui/Button'
 import {memo, useCallback} from 'react'
 import {useTranslation} from 'react-i18next'
 

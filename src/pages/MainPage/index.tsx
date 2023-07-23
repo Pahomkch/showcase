@@ -1,6 +1,7 @@
 import {memo} from 'react'
 import styles from './style.module.scss'
 import {useTranslation} from 'react-i18next'
+import { Loader } from 'shared/ui/Loader'
 
 const MainPage = memo(function MainPage() {
   const {t} = useTranslation()
@@ -31,6 +32,8 @@ const MainPage = memo(function MainPage() {
         <span className={styles.a}></span>
         <span className={styles.a}></span>
       </div>
+
+      <Loader />
     </div>
   )
 })

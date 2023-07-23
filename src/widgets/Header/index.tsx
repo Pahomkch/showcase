@@ -1,6 +1,6 @@
 import {memo} from 'react'
 import styles from './style.module.scss'
-import {Link} from 'components/Link'
+import {Link} from 'shared/ui/Link'
 import classNames from 'classnames'
 import {useTranslation} from 'react-i18next'
 

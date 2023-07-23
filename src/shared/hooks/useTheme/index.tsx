@@ -1,4 +1,4 @@
-import {ThemeContext} from 'common/Contexts/ThemeContext'
+import {ThemeContext} from 'shared/Contexts/ThemeContext'
 import {useCallback, useContext} from 'react'
 
 export const useTheme = () => {

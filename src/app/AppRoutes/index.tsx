@@ -3,11 +3,11 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from 'react-router-dom'
-import {Suspense, lazy, memo} from 'react'
-import {Layout} from 'common/Layout'
+import {lazy, memo} from 'react'
+import {Layout} from 'shared/ui/Layout'
 import MainPage from 'pages/MainPage'
-import { useTranslation } from 'react-i18next'
 const LazyAboutPage = lazy(() => import('pages/About'))
+const LazyNotFoundPage = lazy(() => import('pages/NotFoundPage'))
 
 // eslint-disable-next-line no-unused-vars
 enum AppRoutesEnum {
@@ -15,6 +15,8 @@ enum AppRoutesEnum {
   MAIN = '/',
   // eslint-disable-next-line no-unused-vars
   ABOUT = '/about',
+  // eslint-disable-next-line no-unused-vars
+  OTHER = '*',
 }
 
 const routers: Record<AppRoutesEnum, RouteObject> = {
@@ -35,21 +37,26 @@ const routers: Record<AppRoutesEnum, RouteObject> = {
       </Layout>
     ),
   },
+
+  [AppRoutesEnum.OTHER]: {
+    path: AppRoutesEnum.ABOUT,
+    element: (
+      <Layout>
+        <LazyNotFoundPage />
+      </Layout>
+    ),
+  },
 }
 
 export const AppRoutes = memo(function AppRoutes() {
-  const {t} = useTranslation()
-
   return (
-    <Suspense fallback={<div>🌀{t('Loading')}🌀</div>}>
-      <RouterProvider
-        router={createBrowserRouter(
-          Object.entries(routers).map(([key, value]) => ({
-            path: key,
-            element: value.element,
-          })),
-        )}
-      />
-    </Suspense>
+    <RouterProvider
+      router={createBrowserRouter(
+        Object.entries(routers).map(([key, value]) => ({
+          path: key,
+          element: value.element,
+        })),
+      )}
+    />
   )
 })

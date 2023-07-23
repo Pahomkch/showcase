@@ -10,5 +10,7 @@
   "danger": "danger",
   "info": "info",
   "success": "success",
-  "warning": "warning"
+  "warning": "warning",
+  "Go back": "Go back",
+  "Not found page": "Not found page"
 }
