@@ -14,6 +14,7 @@
 
   .link {
     color: var(--info);
+
     &:hover {
       color: var(--on-primary);
     }
@@ -21,6 +22,7 @@
 
   .success {
     color: var(--success);
+
     &:hover {
       color: var(--on-primary);
     }
@@ -28,6 +30,7 @@
 
   .info {
     color: var(--info);
+
     &:hover {
       color: var(--on-primary);
     }
@@ -35,6 +38,7 @@
 
   .warning {
     color: var(--warning);
+
     &:hover {
       color: var(--on-primary);
     }
@@ -42,6 +46,7 @@
 
   .danger {
     color: var(--danger);
+
     &:hover {
       color: var(--on-primary);
     }
@@ -63,27 +68,27 @@
   align-items: center;
 }
 
-.subgrid {
-}
-
 .a,
 .b,
 .c {
   display: block;
   width: 40px;
   height: 40px;
-  background-color: rgb(10, 60, 60);
+  background-color: rgb(10 60 60);
 }
+
 .a {
   @container (400px < width <  900px) {
     background-color: red;
   }
 }
+
 .b {
   @container (200px < width <  600px) {
     background-color: blue;
   }
 }
+
 .c {
   @container (min-width: 700px) {
     background-color: yellow;

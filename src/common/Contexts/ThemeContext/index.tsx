@@ -12,6 +12,7 @@ export const LOCAL_STORAGE_THEME_KEY = 'user-theme'
 
 interface ThemeContext {
   theme: Theme
+  // eslint-disable-next-line no-unused-vars
   toggleTheme: (theme: Theme) => void
 }
 

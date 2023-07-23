@@ -16,16 +16,16 @@ const MainPage = memo(function MainPage() {
       </div>
 
       <div className={styles.links}>
-        <p className={styles.success}>success</p>
-        <p className={styles.info}>info</p>
-        <p className={styles.warning}>warning</p>
-        <p className={styles.danger}>danger</p>
+        <p className={styles.success}>{t('success')}</p>
+        <p className={styles.info}>{t('info')}</p>
+        <p className={styles.warning}>{t('warning')}</p>
+        <p className={styles.danger}>{t('danger')}</p>
       </div>
 
       <div style={{display: 'grid'}}>123</div>
 
       <div className={styles['grid-container']}>
-        <span>Subgrids</span>
+        <span>{t('Subgrids')}</span>
         <span className={styles.a}></span>
         <span className={styles.a}></span>
         <span className={styles.a}></span>

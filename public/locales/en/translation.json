@@ -1,8 +1,14 @@
 {
-  "Close": "Close",
-  "Open": "Open",
-  "Language": "English",
-  "Main": "Main",
   "About": "About",
-  "Hello APP": "Hello app"
+  "Close": "Close",
+  "Hello APP": "Hello app",
+  "Language": "English",
+  "Loading": "Loading",
+  "Main": "Main",
+  "Open": "Open",
+  "Subgrids": "subgrids",
+  "danger": "danger",
+  "info": "info",
+  "success": "success",
+  "warning": "warning"
 }
