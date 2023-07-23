@@ -1,16 +1,18 @@
 {
   "About": "About",
   "Close": "Close",
+  "Go back": "Go back",
   "Hello APP": "Hello app",
   "Language": "English",
   "Loading": "Loading",
   "Main": "Main",
+  "Not found page": "Not found page",
   "Open": "Open",
+  "Reload page": "Reload page",
+  "Somthing went wrong": "Somthing went wrong",
   "Subgrids": "subgrids",
   "danger": "danger",
   "info": "info",
   "success": "success",
-  "warning": "warning",
-  "Go back": "Go back",
-  "Not found page": "Not found page"
+  "warning": "warning"
 }

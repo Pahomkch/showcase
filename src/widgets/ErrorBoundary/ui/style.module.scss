@@ -1,0 +1,14 @@
+.container {
+  height: var(--header-height);
+  padding: 5px 10px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: flex-start;
+  column-gap: 16px;
+  align-items: center;
+  background: var(--contrast-color);
+
+  &:hover {
+    box-shadow: inset 2px 2px 5px var(--primary-color);
+  }
+}

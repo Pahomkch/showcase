@@ -1,7 +1,7 @@
 import {memo} from 'react'
 import styles from './style.module.scss'
 import {useTranslation} from 'react-i18next'
-import { Loader } from 'shared/ui/Loader'
+import {Loader} from 'shared/ui/Loader'
 
 const MainPage = memo(function MainPage() {
   const {t} = useTranslation()
@@ -9,7 +9,6 @@ const MainPage = memo(function MainPage() {
   return (
     <div className={styles.container}>
       <p>{t('Hello APP')}</p>
-
       <div className={styles.cq}>
         <div className={styles.a}></div>
         <div className={styles.b}></div>
