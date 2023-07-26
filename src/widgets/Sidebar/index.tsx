@@ -17,8 +17,13 @@ export const Sidebar = memo(function Sidebar(props: {className?: string}) {
       className={classNames(styles.container, props.className, {
         [styles.close]: isClose,
       })}
+      data-testid="sidebar"
     >
-      <Button className={styles.toggle} onClick={toggle}>
+      <Button
+        className={styles.toggle}
+        onClick={toggle}
+        data-testid="sidebar-toggle"
+      >
         {isClose ? t('Open') : t('Close')}
       </Button>
 
