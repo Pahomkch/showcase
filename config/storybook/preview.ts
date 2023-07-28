@@ -1,4 +1,5 @@
 import type {Preview} from '@storybook/react'
+import {browserRouter} from './decorators/browserRouter'
 
 const preview: Preview = {
   parameters: {
@@ -10,6 +11,8 @@ const preview: Preview = {
       },
     },
   },
+
+  decorators: [browserRouter],
 }
 
 export default preview

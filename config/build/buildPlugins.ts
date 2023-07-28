@@ -24,7 +24,7 @@ export function buildPlugins(params: {
     }),
 
     new BundleAnalyzerPlugin({
-      openAnalyzer: false
-    })
+      openAnalyzer: false,
+    }),
   ]
 }

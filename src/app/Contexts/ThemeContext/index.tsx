@@ -7,7 +7,11 @@ import {
   useState,
 } from 'react'
 
-type Theme = 'light' | 'dark'
+export type Theme = 'light' | 'dark'
+
+const themeTypeGuard = (theme: string): theme is Theme =>
+  ['light', 'dark'].includes(theme)
+
 export const LOCAL_STORAGE_THEME_KEY = 'user-theme'
 
 interface ThemeContext {
@@ -22,8 +26,6 @@ export const ThemeContext = createContext<ThemeContext>({
 })
 
 function getThemeFromLocalStorage(): Theme {
-  const themeTypeGuard = (theme: string): theme is Theme =>
-    ['light', 'dark'].includes(theme as Theme)
   const userTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY)
   return themeTypeGuard(userTheme) ? userTheme : 'light'
 }

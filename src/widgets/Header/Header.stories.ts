@@ -1,14 +1,14 @@
-import {themeProvider} from '../../../../config/storybook/decorators/themeProvider'
-import {Button} from './'
+import {themeProvider} from './../../../config/storybook/decorators/themeProvider'
 import type {Meta, StoryObj} from '@storybook/react'
+import {Header} from './index'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: 'shared/Button',
-  component: Button,
+  title: 'widgets/Header',
+  component: Header,
+
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
-    // layout: 'centered',
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
@@ -16,7 +16,7 @@ const meta = {
   argTypes: {
     // backgroundColor: {control: 'color'},
   },
-} satisfies Meta<typeof Button>
+} satisfies Meta<typeof Header>
 
 export default meta
 type Story = StoryObj<typeof meta>
@@ -24,14 +24,10 @@ type Story = StoryObj<typeof meta>
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Default: Story = {
   args: {
-    children: 'Button',
+    // primary: true,
+    // children: 'Button',
   },
 }
 
-export const Dark: Story = {
-  args: {
-    children: 'Button',
-  },
-}
-
+export const Dark: Story = {}
 Dark.decorators = [themeProvider('dark')]

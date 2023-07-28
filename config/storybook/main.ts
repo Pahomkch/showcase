@@ -1,5 +1,6 @@
 import type {StorybookConfig} from '@storybook/react-webpack5'
-import appWebpackConfig from '../../webpack.config'
+import webpackConfig from '../../webpack.config'
+const appWebpackConfig = webpackConfig({mode: 'development'})
 
 const config: StorybookConfig = {
   stories: [
@@ -21,11 +22,20 @@ const config: StorybookConfig = {
   },
 
   webpackFinal: async (config) => {
+    console.log('INSIDE: ', config.resolve)
     return {
       ...config,
       module: {
         ...config.module,
-        rules: [...config.module.rules, ...appWebpackConfig({mode: 'development'}).module.rules],
+        rules: [...config.module.rules, ...appWebpackConfig.module.rules],
+      },
+
+      resolve: {
+        ...config.resolve,
+        modules: [
+          ...config.resolve.modules,
+          ...appWebpackConfig.resolve.modules,
+        ],
       },
     }
   },
