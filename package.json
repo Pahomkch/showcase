@@ -15,7 +15,8 @@
     "test": "jest --config=config/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "build-storybook": "storybook build -c ./config/storybook",
-    "chromatic": "dotenv -e .env npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
+    "chromatic": "dotenv -e .env npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN",
+    "typecheck": "tsc --noEmit --project tsconfig.json"
   },
   "keywords": [],
   "author": "",
