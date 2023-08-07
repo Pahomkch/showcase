@@ -1,3 +1,5 @@
+![Typecheck](https://github.com/Pahomkch/showcase/actions/workflows/pr-check.yml/badge.svg)
+
 This project use FSD (Feature Slice Design)
 
 - (yes) app || Global things, important for all application || Global styles, root component

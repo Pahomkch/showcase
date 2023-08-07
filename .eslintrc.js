@@ -43,6 +43,7 @@ module.exports = {
     'no-multiple-empty-lines': ['error'],
     indent: ['error', 2],
     'no-unused-vars': ['warn'],
+    '@typescript-eslint/no-unused-vars': ['warn'],
     'i18n-json/valid-json': 2,
     'i18n-json/identical-keys': 0,
 
