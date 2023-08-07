@@ -1,12 +1,11 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer'
-
 import webpack from 'webpack'
 import {BuildPaths} from '../../config/types'
 
 export function buildPlugins(params: {
-  htmlPath: BuildPaths['htmlFile']
+  htmlPath: BuildPaths['htmlFile'],
   isDev: boolean
 }): webpack.WebpackPluginInstance[] {
   return [

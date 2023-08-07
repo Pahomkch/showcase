@@ -1,5 +1,6 @@
 import {buildWebpackConfig} from './config/build'
 import path from 'path'
+import 'dotenv/config'
 
 export default buildWebpackConfig({
   paths: {

@@ -18,3 +18,4 @@ chrome-user-data
 *.sublime-workspace
 .idea
 .vscode
+.env
