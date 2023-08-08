@@ -8,61 +8,88 @@ on:
       - main
 
 jobs:
-  install:
+  install-dependencies:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: use-node
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: npm ci
+      - name: install dependecies
+        run: npm ci
   typecheck:
-    needs: install
+    needs: install-dependencies
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: use-node
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: npm ci
-      - run: npm run typecheck
+      - name: install dependecies
+        run: npm ci
+      - name: typecheck
+        run: npm run typecheck
   lint-ts:
-    needs: install
+    needs: install-dependencies
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: use-node
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: npm ci
-      - run: npm run lint:ts
+      - name: install dependecies
+        run: npm ci
+      - name: lint typescript
+        run: npm run lint:ts
   lint-scss:
-    needs: install
+    needs: install-dependencies
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: use-node
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: npm ci
-      - run: npm run lint:scss
-  test:
-    needs: install
+      - name: install dependecies
+        run: npm ci
+      - name: list styles scss
+        run: npm run lint:scss
+  unit-tests:
+    needs: install-dependencies
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: use-node
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: npm ci
-      - run: npm run test
+      - name: install dependecies
+        run: npm ci
+      - name: run unit tests
+        run: npm run test
   screenshot-test:
-    needs: install
+    needs: install-dependencies
     runs-on: ubuntu-latest
+    environment:
+      name: CI
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: use-node
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: npm ci
-      - run: npx chromatic --project-token=${{secrets.CHROMATIC_PROJECT_TOKEN}}
+      - name: install dependecies
+        run: npm ci
+      - name: screenshot tests
+        run: npx chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
