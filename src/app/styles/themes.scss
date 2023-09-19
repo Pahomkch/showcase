@@ -3,7 +3,7 @@
 }
 
 .app.light {
-  --primary-color: #363636;
+  --primary-color: #51348b;
   --contrast-color: #2bc80029;
   --secondary-color: #ebf1db;
   --on-primary: #333;
@@ -13,9 +13,8 @@
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
-
-  color: var(--primary-color);
-  background: #e2dfdf;
+  --color: var(--primary-color);
+  --background: #e2dfdf;
 }
 
 .app.dark {
@@ -29,7 +28,6 @@
   --info: #1694ab;
   --warning: #b2860a;
   --danger: #9a1c2c;
-
-  color: var(--primary-color);
-  background: #979797;
+  --color: var(--primary-color);
+  --background: #979797;
 }

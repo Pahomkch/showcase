@@ -25,6 +25,13 @@ module.exports = {
         sourceType: 'script',
       },
     },
+
+    {
+      files: ['*.tsx'],
+      rules: {
+        'react/prop-types': 'off',
+      },
+    },
   ],
 
   parser: '@typescript-eslint/parser',
@@ -34,7 +41,7 @@ module.exports = {
     sourceType: 'module',
   },
 
-  plugins: ['@typescript-eslint', 'react', 'i18next'],
+  plugins: ['@typescript-eslint', 'react', 'i18next', 'react-hooks'],
 
   rules: {
     'react/react-in-jsx-scope': 'off',
@@ -63,5 +70,8 @@ module.exports = {
     ],
 
     'i18next/no-literal-string': 2,
+
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
 }
