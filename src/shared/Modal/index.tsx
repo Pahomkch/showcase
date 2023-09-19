@@ -49,7 +49,9 @@ export const Modal = memo(function Modal(props: {
   return (
     <Portal target={props.target}>
       <div
-        className={classNames(props.className, styles.overlay, {[styles.open]: props.isOpen})}
+        className={classNames(props.className, styles.overlay, {
+          [styles.open]: props.isOpen,
+        })}
         onClick={handleOverlayClick}
       >
         <div className={styles.content} onClick={handleContentClick}>

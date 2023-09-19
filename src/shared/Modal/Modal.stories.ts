@@ -17,7 +17,7 @@ const meta = {
   argTypes: {
     // backgroundColor: {control: 'color'},
   },
-  decorators: [themeProvider('light')]
+  decorators: [themeProvider('light')],
 } satisfies Meta<typeof Modal>
 
 export default meta

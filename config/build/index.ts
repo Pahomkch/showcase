@@ -9,7 +9,7 @@ const PORT = 3000
 
 export function buildWebpackConfig(
   params: BuildOptions,
-// eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line no-unused-vars
 ): (env: buildConfigEnv) => webpack.Configuration {
   return (env) => {
     const isDev = env.mode === 'development'
