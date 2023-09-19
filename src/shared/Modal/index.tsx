@@ -1,4 +1,5 @@
 import {
+  ComponentProps,
   MouseEventHandler,
   ReactNode,
   memo,
@@ -14,6 +15,7 @@ export const Modal = memo(function Modal(props: {
   children: ReactNode
   isOpen: boolean
   onClose: VoidFunction
+  target?: ComponentProps<typeof Portal>['target']
 }) {
   const handleOverlayClick = useCallback(() => {
     const onClose = props.onClose
@@ -45,9 +47,9 @@ export const Modal = memo(function Modal(props: {
   }, [handleEscClick])
 
   return (
-    <Portal>
+    <Portal target={props.target}>
       <div
-        className={classNames(styles.overlay, {[styles.open]: props.isOpen})}
+        className={classNames(props.className, styles.overlay, {[styles.open]: props.isOpen})}
         onClick={handleOverlayClick}
       >
         <div className={styles.content} onClick={handleContentClick}>

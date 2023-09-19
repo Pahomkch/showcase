@@ -1,9 +1,11 @@
+// import { themeProvider } from 'config/storybook/decorators/themeProvider'
+import {themeProvider} from '../../../config/storybook/decorators/themeProvider'
 import {Modal} from '.'
 import type {Meta, StoryObj} from '@storybook/react'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: 'shared/Button',
+  title: 'shared/Modal',
   component: Modal,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
@@ -15,6 +17,7 @@ const meta = {
   argTypes: {
     // backgroundColor: {control: 'color'},
   },
+  decorators: [themeProvider('light')]
 } satisfies Meta<typeof Modal>
 
 export default meta
@@ -24,6 +27,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     children: 'Modal contnet',
+    target: document.body,
     isOpen: true,
     onClose: () => {},
   },
