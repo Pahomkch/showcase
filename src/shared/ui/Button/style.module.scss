@@ -8,3 +8,42 @@
   cursor: pointer;
   background-color: var(--secondary-color);
 }
+
+.sizeS {
+  padding: 2px 10px;
+}
+
+.sizeM {
+  padding: 8px 15px;
+}
+
+.sizeL {
+  padding: 15px 25px;
+}
+
+.roundSmall {
+  border-radius: 3px;
+}
+
+.roundMedium {
+  border-radius: 8px;
+}
+
+.roundFull {
+  border-radius: 100%;
+}
+
+
+
+.primary {
+  background: var(--primary-color);
+}
+
+.secondary {
+  background: var(--secondary-color);
+}
+
+.outline {
+  background: transparent;
+  border: 1px black solid;
+}

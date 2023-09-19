@@ -34,4 +34,54 @@ export const Dark: Story = {
   },
 }
 
+export const SizeS: Story = {
+  args: {
+    children: 's',
+    size: 's'
+  },
+}
+
+export const SizeM: Story = {
+  args: {
+    children: 'm',
+    size: 'm'
+  },
+}
+
+export const SizeL: Story = {
+  args: {
+    children: 'l',
+    size: 'l'
+  },
+}
+
+export const Rounded: Story = {
+  args: {
+    children: 'full',
+    rounded: 'full'
+  },
+}
+
+export const Primary: Story = {
+  args: {
+    children: 'primary',
+    variant: 'primary'
+  },
+
+}
+
+export const Secondary: Story = {
+  args: {
+    children: 'secondary',
+    variant: 'secondary'
+  },
+}
+
+export const Outline: Story = {
+  args: {
+    children: 'outline',
+    variant: 'outline'
+  },
+}
+
 Dark.decorators = [themeProvider('dark')]
