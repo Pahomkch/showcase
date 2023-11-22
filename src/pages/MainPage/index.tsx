@@ -24,12 +24,15 @@ const MainPage = memo(function MainPage() {
         <Button size="s" rounded="small">
           1
         </Button>
+
         <Button size="m" rounded="medium">
           2
         </Button>
+
         <Button size="l" rounded="full">
           3
         </Button>
+
         <Button variant="primary">4</Button>
         <Button variant="secondary">5</Button>
         <Button variant="outline" onClick={openModal}>

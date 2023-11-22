@@ -5,7 +5,7 @@ import 'app/styles/index.scss'
 
 export const themeProvider = (theme: Theme) => {
   const WithTheme = (StoryComponent: FC) => (
-    <div className={classNames('app', theme)}>
+    <div className={classNames('app foreasyfindme', theme)}>
       <StoryComponent />
     </div>
   )

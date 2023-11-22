@@ -16,6 +16,7 @@ const meta = {
   argTypes: {
     // backgroundColor: {control: 'color'},
   },
+  decorators: [themeProvider('light')],
 } satisfies Meta<typeof Button>
 
 export default meta

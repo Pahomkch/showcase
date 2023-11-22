@@ -6,30 +6,30 @@
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color, red);
 }
 
-.sizeS {
+.size__s {
   padding: 2px 10px;
 }
 
-.sizeM {
+.size__m {
   padding: 8px 15px;
 }
 
-.sizeL {
+.size__l {
   padding: 15px 25px;
 }
 
-.roundSmall {
+.round__small {
   border-radius: 3px;
 }
 
-.roundMedium {
+.round__medium {
   border-radius: 8px;
 }
 
-.roundFull {
+.round__full {
   border-radius: 100%;
 }
 

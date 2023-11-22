@@ -7,7 +7,7 @@ export const ChangeLanguage = memo(function ChangeLanguage() {
 
   const toggleLanguage = useCallback(
     () => i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru'),
-    [],
+    [i18n],
   )
 
   return <Button onClick={toggleLanguage}>{t('Language')}</Button>

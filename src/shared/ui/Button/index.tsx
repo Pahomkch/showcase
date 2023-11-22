@@ -20,13 +20,13 @@ export const Button = memo(function Button(props: ButtonProps) {
   return (
     <button
       className={cn(styles.button, className, {
-        [styles.sizeS]: size === 's',
-        [styles.sizeM]: size === 'm',
-        [styles.sizeL]: size === 'l',
+        [styles.size__s]: size === 's',
+        [styles.size__s]: size === 'm',
+        [styles.size__l]: size === 'l',
 
-        [styles.roundSmall]: rounded === 'small',
-        [styles.roundMedium]: rounded === 'medium',
-        [styles.roundFull]: rounded === 'full',
+        [styles.round__small]: rounded === 'small',
+        [styles.round__medium]: rounded === 'medium',
+        [styles.round__full]: rounded === 'full',
 
         [styles.primary]: variant === 'primary',
         [styles.secondary]: variant === 'secondary',
